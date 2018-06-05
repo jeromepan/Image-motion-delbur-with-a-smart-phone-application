@@ -1,0 +1,6 @@
+framework module ZoomImageView {
+  umbrella header "ZoomImageView-umbrella.h"
+
+  export *
+  module * { export * }
+}
