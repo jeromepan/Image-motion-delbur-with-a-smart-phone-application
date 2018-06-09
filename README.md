@@ -1,7 +1,8 @@
 # Enhancement-of-Photographs-Taken-with-a-Moving-Smartphone
 
 
-![alt text](https://github.com/RockSoda/DeblurIOS/blob/master/before.png) ![alt text](https://github.com/RockSoda/DeblurIOS/blob/master/before.png)
+![alt text](https://github.com/jeromepan/Enhancement-of-Photographs-Taken-with-a-Moving-Smartphone/blob/master/1.png) 
+![alt text](https://github.com/jeromepan/Enhancement-of-Photographs-Taken-with-a-Moving-Smartphone/blob/master/2.png)
 
 Reference [23] proved that we can compute the same blur filter f in both cases.
 
