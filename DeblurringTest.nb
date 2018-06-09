@@ -1,0 +1,87 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      2622,         79]
+NotebookOptionsPosition[      2376,         66]
+NotebookOutlinePosition[      2724,         81]
+CellTagsIndexPosition[      2681,         78]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"psfMotion", "[", 
+    RowBox[{
+     RowBox[{"dim_", "?", "NumberQ"}], ",", " ", 
+     RowBox[{"theta_", "?", "NumberQ"}]}], "]"}], " ", ":=", "\n", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", "PSF", "}"}], ",", "\n", 
+     RowBox[{
+      RowBox[{"PSF", " ", "=", " ", 
+       RowBox[{"ConstantArray", "[", 
+        RowBox[{"0.0", ",", " ", 
+         RowBox[{"{", 
+          RowBox[{"dim", ",", " ", "dim"}], "}"}]}], "]"}]}], ";", "\n", 
+      RowBox[{
+       RowBox[{"PSF", "[", 
+        RowBox[{"[", 
+         RowBox[{
+          RowBox[{"Ceiling", "[", 
+           RowBox[{"dim", " ", "/", " ", "2.0"}], "]"}], ",", " ", "All"}], 
+         "]"}], "]"}], " ", "=", " ", 
+       RowBox[{"1.0", " ", "/", " ", "dim"}]}], ";", "\n", 
+      RowBox[{"Return", "[", 
+       RowBox[{"ImageRotate", "[", 
+        RowBox[{
+         RowBox[{"Image", "[", "PSF", "]"}], ",", " ", 
+         RowBox[{"theta", " ", "Degree"}]}], "]"}], "]"}], ";"}]}], "\n", 
+    "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"psf", " ", "=", " ", 
+   RowBox[{"psfMotion", "[", 
+    RowBox[{"22", ",", " ", 
+     RowBox[{"-", "2"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Image", "[", "psf", "]"}], "\[IndentingNewLine]", 
+ RowBox[{"ImageDeconvolve", "[", 
+  RowBox[{"img", ",", " ", "psf", ",", " ", 
+   RowBox[{"Method", " ", "->", " ", "\"\<Wiener\>\""}], ",", " ", "\n", 
+   RowBox[{"MaxIterations", " ", "->", " ", "10"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.7323691792934184`*^9, 3.732369234437172*^9}, {
+  3.7323693194630346`*^9, 3.732369356925419*^9}, {3.7323701314623604`*^9, 
+  3.7323702079505806`*^9}, {3.7345451199033947`*^9, 3.734545129621933*^9}, {
+  3.7375601695438185`*^9, 3.7375601712539015`*^9}, {3.737561167495435*^9, 
+  3.7375611699659653`*^9}}]
+},
+WindowSize->{759, 833},
+WindowMargins->{{Automatic, 326}, {36, Automatic}},
+FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (September 21, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 1814, 44, 202, "Input"]
+}
+]
+*)
+
