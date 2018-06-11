@@ -2,7 +2,7 @@
 //  DeblurScreenController.swift
 //  SeniorProject
 //
-//  Created by Sigh on 1/31/18.
+//  Created by Sigh and Jerry on 1/31/18.
 //  Copyright © 2018 Sigh. All rights reserved.
 //
 
