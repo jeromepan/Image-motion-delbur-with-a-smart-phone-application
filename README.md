@@ -1,4 +1,4 @@
-# Enhancement-of-Photographs-Taken-with-a-Moving-Smartphone
+# Motion Deblur mobile phone application
 
 
 ![alt text](https://github.com/jeromepan/Enhancement-of-Photographs-Taken-with-a-Moving-Smartphone/blob/master/1.png) 
